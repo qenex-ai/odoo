@@ -1,0 +1,68 @@
+// Self-hosted WOFF2 (latin subset). Inter for body, Space Grotesk for
+// display/UI, JetBrains Mono for metadata. No third-party CDN — GDPR.
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/inter-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/inter-500.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/inter-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/space-grotesk-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/space-grotesk-500.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/space-grotesk-600.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/space-grotesk-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/jetbrains-mono-400.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/qenex_branding/static/src/fonts/jetbrains-mono-500.woff2') format('woff2');
+}

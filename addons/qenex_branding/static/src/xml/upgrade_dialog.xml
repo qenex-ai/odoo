@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!--
+      The default Enterprise upgrade pitch is irrelevant in a QENEX
+      deployment. Replace the dialog body with a plain placeholder that
+      keeps the dialog working (form code still constructs and dismisses
+      it) but removes Odoo Enterprise marketing.
+    -->
+    <t t-inherit="web.UpgradeDialog" t-inherit-mode="extension">
+        <xpath expr="//Dialog" position="attributes">
+            <attribute name="title.translate">Feature unavailable</attribute>
+        </xpath>
+        <xpath expr="//div[@role='status']" position="replace">
+            <div role="status" class="p-3">
+                This feature is not available in your QENEX edition.
+                <br/>
+                Contact <a href="mailto:support@qenex.ai">support@qenex.ai</a> if you need it enabled.
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-set-slot='footer']" position="replace">
+            <t t-set-slot="footer">
+                <button class="btn btn-secondary" t-on-click="this.props.close">Close</button>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

@@ -1,0 +1,25 @@
+// Apply QENEX typography across the backend web client. Falls back to
+// Inter for body and Space Grotesk for display.
+
+body,
+.o_web_client,
+.modal {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1, h2, h3, h4, h5,
+.o_form_view .oe_title h1,
+.o_breadcrumb {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+code, kbd, samp, pre,
+.o_field_widget.o_field_code {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+// Top navbar (uses $o-brand-odoo via core SCSS; this just enforces the
+// brand on the brand-promotion placeholder if anything still renders).
+.o_brand_promotion { display: none !important; }

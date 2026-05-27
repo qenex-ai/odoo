@@ -1,0 +1,18 @@
+// QENEX brand color tokens.
+//
+// Loaded into web._assets_primary_variables ahead of Odoo's own
+// primary_variables.scss (prepend in __manifest__.py), so every
+// downstream variable that defaults to `$o-community-color` /
+// `$o-enterprise-color` resolves to QENEX violet without each one
+// needing an explicit override.
+//
+// Tokens are mirrored from brand-kit/README.md.
+
+$o-community-color: #6D28D9;   // brand-kit Violet-600
+$o-enterprise-color: #6D28D9;  // kept identical to community per spec
+$o-brand-primary: #6D28D9;
+$o-brand-secondary: #22D3EE;   // brand-kit Cyan-400
+$o-brand-odoo: #6D28D9;        // dark chrome accent — same violet
+
+// Optional extras consumed by Bootstrap when explicitly set
+$primary: #6D28D9;

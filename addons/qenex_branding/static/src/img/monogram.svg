@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" width="88" height="88">
+  <defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#1E1B4B"></stop>
+    <stop offset=".35" stop-color="#4C1D95"></stop>
+    <stop offset=".7" stop-color="#7C3AED"></stop>
+    <stop offset="1" stop-color="#D946EF"></stop>
+  </linearGradient>
+    <mask id="qm">
+      <rect width="88" height="88" fill="black"></rect>
+      <circle cx="44" cy="44" r="30" fill="white"></circle>
+      <circle cx="44" cy="44" r="23" fill="black"></circle>
+      <rect x="64.2" y="64.2" width="22" height="6.4" rx="1.2" fill="white" transform="rotate(45 67.4 67.4)"></rect>
+    </mask>
+  </defs>
+  
+  <rect width="88" height="88" fill="url(#g)" mask="url(#qm)"></rect>
+  <g opacity="0.85" fill="none" stroke="#22D3EE" stroke-width=".9">
+    <ellipse cx="44" cy="44" rx="18" ry="6" transform="rotate(28 44 44)"></ellipse>
+    <ellipse cx="44" cy="44" rx="18" ry="6" transform="rotate(-28 44 44)"></ellipse>
+    <ellipse cx="44" cy="44" rx="18" ry="6" transform="rotate(90 44 44)"></ellipse>
+  </g>
+  <circle cx="44" cy="44" r="2.4" fill="#22D3EE"></circle>
+</svg>

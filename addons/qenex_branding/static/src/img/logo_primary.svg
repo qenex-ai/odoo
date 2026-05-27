@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 88" width="360" height="88">
+  <defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#1E1B4B"></stop>
+    <stop offset=".35" stop-color="#4C1D95"></stop>
+    <stop offset=".7" stop-color="#7C3AED"></stop>
+    <stop offset="1" stop-color="#D946EF"></stop>
+  </linearGradient>
+    <mask id="qm">
+      <rect width="360" height="88" fill="black"></rect>
+      <circle cx="44" cy="44" r="30" fill="white"></circle>
+      <circle cx="44" cy="44" r="23" fill="black"></circle>
+      <rect x="64.2" y="64.2" width="22" height="6.4" rx="1.2" fill="white" transform="rotate(45 67.4 67.4)"></rect>
+    </mask>
+  </defs>
+  
+  <rect width="360" height="88" fill="url(#g)" mask="url(#qm)"></rect>
+  <g opacity="0.85" fill="none" stroke="#22D3EE" stroke-width=".9">
+    <ellipse cx="44" cy="44" rx="18" ry="6" transform="rotate(28 44 44)"></ellipse>
+    <ellipse cx="44" cy="44" rx="18" ry="6" transform="rotate(-28 44 44)"></ellipse>
+    <ellipse cx="44" cy="44" rx="18" ry="6" transform="rotate(90 44 44)"></ellipse>
+  </g>
+  <circle cx="44" cy="44" r="2.4" fill="#22D3EE"></circle>
+  <rect x="86" y="28" width="4.6" height="32" fill="#F4F4F8"></rect><rect x="86" y="28" width="22" height="4.6" fill="#F4F4F8"></rect><rect x="86" y="41.7" width="17.16" height="4.6" fill="#F4F4F8"></rect><rect x="86" y="55.4" width="22" height="4.6" fill="#F4F4F8"></rect><rect x="114" y="28" width="4.6" height="32" fill="#F4F4F8"></rect><rect x="131.4" y="28" width="4.6" height="32" fill="#F4F4F8"></rect><polygon fill="#F4F4F8" points="114,28 119.98,28 136,58.16 136,60 130.02,60 114,29.84"></polygon><rect x="142" y="28" width="4.6" height="32" fill="#F4F4F8"></rect><rect x="142" y="28" width="22" height="4.6" fill="#F4F4F8"></rect><rect x="142" y="41.7" width="17.16" height="4.6" fill="#F4F4F8"></rect><rect x="142" y="55.4" width="22" height="4.6" fill="#F4F4F8"></rect><polygon fill="#F4F4F8" points="170,28 175.98,28 194,60 188.02,60"></polygon><polygon fill="#F4F4F8" points="194,28 188.02,28 170,60 175.98,60"></polygon>
+</svg>
