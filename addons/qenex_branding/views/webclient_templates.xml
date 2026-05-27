@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+      Replace Odoo brand surfaces in the base web.layout: default <title>,
+      shortcut icon, social meta tags. Keep the xpath narrow so unrelated
+      child templates (frontend_layout, login_layout, webclient_bootstrap)
+      continue to inject their own bits cleanly.
+    -->
+    <template id="layout_inherit" inherit_id="web.layout" name="QENEX: web.layout brand surfaces">
+        <xpath expr="//title" position="replace">
+            <title t-esc="title or 'QENEX'"/>
+        </xpath>
+        <xpath expr="//link[@rel='shortcut icon']" position="replace">
+            <link type="image/x-icon" rel="shortcut icon"
+                  t-att-href="x_icon or '/qenex_branding/static/src/img/favicon.ico'"/>
+            <link rel="icon" type="image/png" sizes="32x32"
+                  href="/qenex_branding/static/src/img/favicon-32.png"/>
+            <link rel="icon" type="image/png" sizes="192x192"
+                  href="/qenex_branding/static/src/img/favicon-192.png"/>
+            <link rel="apple-touch-icon" sizes="180x180"
+                  href="/qenex_branding/static/src/img/app-icon-180.png"/>
+            <meta name="application-name" content="QENEX"/>
+            <meta name="apple-mobile-web-app-title" content="QENEX"/>
+            <meta property="og:image" content="/qenex_branding/static/src/img/og.png"/>
+            <meta name="twitter:image" content="/qenex_branding/static/src/img/og.png"/>
+        </xpath>
+    </template>
+
+    <!--
+      Web client bootstrap: replace the iOS touch icon and PWA theme color
+      meta tag with QENEX values.
+    -->
+    <template id="webclient_bootstrap_inherit" inherit_id="web.webclient_bootstrap"
+              name="QENEX: webclient_bootstrap brand">
+        <xpath expr="//meta[@name='theme-color']" position="replace">
+            <meta name="theme-color" content="#0A0E27"/>
+        </xpath>
+        <xpath expr="//link[@rel='apple-touch-icon']" position="replace">
+            <link rel="apple-touch-icon" href="/qenex_branding/static/src/img/app-icon-180.png"/>
+        </xpath>
+    </template>
+
+    <!--
+      Strip "Powered by Odoo" from the portal/frontend footer. We empty the
+      brand_promotion block entirely; per spec, no QENEX equivalent is added.
+    -->
+    <template id="brand_promotion_inherit" inherit_id="web.brand_promotion"
+              name="QENEX: empty brand_promotion">
+        <xpath expr="//div[hasclass('o_brand_promotion')]" position="replace">
+            <div class="o_brand_promotion"/>
+        </xpath>
+    </template>
+
+    <template id="brand_promotion_message_inherit" inherit_id="web.brand_promotion_message"
+              name="QENEX: empty brand_promotion_message">
+        <xpath expr="//t[@t-set='odoo_logo']" position="replace">
+            <t t-set="odoo_logo"></t>
+        </xpath>
+        <xpath expr="//t[@t-set='final_message']" position="replace">
+            <t t-set="final_message">%s%s</t>
+        </xpath>
+    </template>
+
+    <!--
+      Login footer: remove the "Powered by Odoo" link.
+    -->
+    <template id="login_layout_inherit" inherit_id="web.login_layout"
+              name="QENEX: login footer">
+        <xpath expr="//a[contains(@href, 'odoo.com')]" position="replace"/>
+    </template>
+
+    <!--
+      Offline page: replace "Odoo logo" alt, "Odoo will load…" copy, and
+      swap the legacy theme color used in the inline <style>.
+    -->
+    <template id="webclient_offline_inherit" inherit_id="web.webclient_offline"
+              name="QENEX: offline page copy">
+        <xpath expr="//div[hasclass('card')]/img" position="attributes">
+            <attribute name="alt">QENEX logo</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('card')]/p" position="replace">
+            <p>Check your network connection and come back here. QENEX will load as soon as you are back online.</p>
+        </xpath>
+    </template>
+
+</odoo>

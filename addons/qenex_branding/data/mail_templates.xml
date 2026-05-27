@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!--
+          Strip "Powered by Odoo" from the main notification email layout.
+          Replace the footer block with a plain mail.QENEX line that uses
+          company.email_secondary_color (seeded to #6D28D9 in post_init_hook).
+        -->
+        <template id="mail_notification_layout_inherit"
+                  inherit_id="mail.mail_notification_layout"
+                  name="QENEX: mail_notification_layout footer">
+            <xpath expr="//div[a[contains(@href, 'odoo.com')]]" position="replace">
+                <div t-if="show_footer" style="color: #555555; font-size:11px;">
+                    <span t-att-style="'color: ' + (company.email_secondary_color or '#6D28D9') + ';'">QENEX</span>
+                    <span t-if="show_unfollow" id="mail_unfollow">
+                        | <a href="/mail/unfollow" style="text-decoration:none; color:#555555;">Unfollow</a>
+                    </span>
+                </div>
+            </xpath>
+        </template>
+
+        <!--
+          Same treatment for the light notification layout. The xpath
+          targets the trailing <tr> wrapping the "Powered by" cell.
+        -->
+        <template id="mail_notification_light_inherit"
+                  inherit_id="mail.mail_notification_light"
+                  name="QENEX: mail_notification_light footer">
+            <xpath expr="//tr[td[a[contains(@href, 'odoo.com')]]]" position="replace">
+                <tr><td align="center" style="min-width: 590px;">
+                    <span t-att-style="'color: ' + (company.email_secondary_color or '#6D28D9') + ';'">QENEX</span>
+                    <span t-if="show_unfollow" id="mail_unfollow">
+                        | <a href="/mail/unfollow" style="text-decoration:none; color:#555555;">Unfollow</a>
+                    </span>
+                </td></tr>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

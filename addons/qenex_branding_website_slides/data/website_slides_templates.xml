@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="mail_notification_channel_invite_inherit"
+              inherit_id="website_slides.mail_notification_channel_invite"
+              name="QENEX: drop Powered by from eLearning invite">
+        <xpath expr="//tr[td[a[contains(@href, 'odoo.com')]]]" position="replace"/>
+    </template>
+
+</odoo>

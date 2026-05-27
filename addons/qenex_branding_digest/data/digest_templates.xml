@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+      Drop the "Powered by Odoo" footer paragraph from the digest mail
+      main template, and the entire "Odoo Mobile" banner section since
+      it links to Google Play / App Store for the Odoo mobile app.
+    -->
+    <template id="digest_mail_main_inherit" inherit_id="digest.digest_mail_main"
+              name="QENEX: drop Powered by Odoo from digest footer">
+        <xpath expr="//p[@id='powered']" position="replace"/>
+        <xpath expr="//t[@t-call='digest.digest_section_mobile']" position="replace"/>
+    </template>
+
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Support page footer line "Website Live Chat Powered by Odoo." -->
+    <template id="support_page_inherit" inherit_id="im_livechat.support_page"
+              name="QENEX: drop Powered by Odoo from livechat support page">
+        <xpath expr="//div[contains(., 'Powered by')]" position="replace">
+            <div/>
+        </xpath>
+    </template>
+
+    <!-- Chat-history mail template trailing POWERED BY row -->
+    <template id="livechat_email_template_inherit" inherit_id="im_livechat.livechat_email_template"
+              name="QENEX: drop Powered by from livechat email">
+        <xpath expr="//tr[td[a[contains(@href, 'odoo.com')]]]" position="replace"/>
+    </template>
+
+</odoo>

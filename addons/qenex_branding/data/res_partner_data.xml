@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!--
+      Rename the system "OdooBot" character to "QENEX Bot". `mail.partner_root`
+      is the author of automated system messages (mail.message.author_id for
+      bot/welcome/system flows) and appears in every Discuss thread, so the
+      "OdooBot" string would otherwise leak into the chat UI verbatim.
+
+      noupdate="1" so a later operator rename is not clobbered on upgrade.
+    -->
+    <record id="base.partner_root" model="res.partner">
+        <field name="name">QENEX Bot</field>
+    </record>
+
+</odoo>

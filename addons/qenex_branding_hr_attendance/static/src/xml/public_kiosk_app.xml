@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!--
+      Both "Powered by Odoo" branches in the kiosk app live inside the
+      o_hr_kiosk_mode_bottom container. Replace each span/div that
+      contains the legacy /web/static/img/logo.png reference.
+    -->
+    <t t-inherit="hr_attendance.public_kiosk_app" t-inherit-mode="extension">
+        <xpath expr="//span[img[contains(@src, '/web/static/img/logo.png')]]" position="replace">
+            <span/>
+        </xpath>
+        <xpath expr="//div[img[contains(@src, '/web/static/img/logo.png')]]" position="replace">
+            <div/>
+        </xpath>
+    </t>
+
+</templates>

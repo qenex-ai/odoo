@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Report letterhead overrides.
+
+  The stock external_layout_standard / _boxed / _bold templates already read
+  company.logo, company.primary_color, company.secondary_color,
+  company.report_header, and company.report_footer. The post_init_hook seeds
+  those fields on each existing company with QENEX values, so the rendered
+  letterhead is QENEX-branded without any template inheritance here.
+
+  We keep this file as the documented home for future report-template
+  overrides. Adding a violet rule to the header was attempted and dropped:
+  the stock layouts compose their header class via `t-attf-class`, so it
+  is not selectable by inheritance xpath without a fragile string match.
+  Brand polish for reports lives in res.company defaults instead.
+-->
+<odoo/>

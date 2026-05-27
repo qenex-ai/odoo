@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="res_config_edition" t-inherit-mode="extension">
+        <xpath expr="//h3" position="replace">
+            <h3 class="px-0">
+                QENEX (powered by Odoo <t t-esc="serverVersion"/>, LGPLv3)
+            </h3>
+        </xpath>
+        <xpath expr="//small" position="replace">
+            <small>
+                QENEX Systems · <a target="_blank" href="https://qenex.ai" style="text-decoration: underline;">qenex.ai</a>
+                · <a id="license" target="_blank" href="http://www.gnu.org/licenses/lgpl.html" style="text-decoration: underline;">GNU LGPL v3</a>
+            </small>
+        </xpath>
+    </t>
+
+</templates>

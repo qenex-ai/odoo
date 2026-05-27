@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="param_web_app_name" model="ir.config_parameter">
+        <field name="key">web.web_app_name</field>
+        <field name="value">QENEX</field>
+    </record>
+
+    <record id="param_web_base_title" model="ir.config_parameter">
+        <field name="key">web.base.title</field>
+        <field name="value">QENEX</field>
+    </record>
+
+    <record id="param_support_url" model="ir.config_parameter">
+        <field name="key">web.support_url</field>
+        <field name="value">mailto:support@qenex.ai</field>
+    </record>
+
+    <record id="param_manifest_theme_color" model="ir.config_parameter">
+        <field name="key">web.manifest_theme_color</field>
+        <field name="value">#0A0E27</field>
+    </record>
+
+    <record id="param_manifest_background_color" model="ir.config_parameter">
+        <field name="key">web.manifest_background_color</field>
+        <field name="value">#0A0E27</field>
+    </record>
+
+</odoo>

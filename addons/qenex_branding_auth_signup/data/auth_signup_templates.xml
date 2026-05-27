@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+      The reset_password_email QWeb template carries a "POWERED BY" cell
+      at the bottom. We replace the whole trailing <tr> wrapping it.
+    -->
+    <template id="reset_password_email_inherit" inherit_id="auth_signup.reset_password_email"
+              name="QENEX: drop Powered by from password reset email">
+        <xpath expr="//tr[td[table[tr[td[a[contains(@href, 'odoo.com')]]]]]]" position="replace"/>
+    </template>
+
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="hr_expense_template_submitted_expenses_inherit"
+              inherit_id="hr_expense.hr_expense_template_submitted_expenses"
+              name="QENEX: drop Powered by from submitted expenses email">
+        <xpath expr="//p[a[contains(@href, 'odoo.com')]]" position="replace"/>
+    </template>
+
+    <template id="hr_expense_template_register_no_user_inherit"
+              inherit_id="hr_expense.hr_expense_template_register_no_user"
+              name="QENEX: drop Powered by from register-no-user email">
+        <xpath expr="//p[a[contains(@href, 'odoo.com')]]" position="replace"/>
+    </template>
+
+</odoo>

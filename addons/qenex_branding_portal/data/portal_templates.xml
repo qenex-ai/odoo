@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="portal_record_sidebar_inherit" inherit_id="portal.portal_record_sidebar"
+              name="QENEX: drop Powered by Odoo from portal sidebar">
+        <xpath expr="//div[a[contains(@href, 'odoo.com')]]" position="replace"/>
+    </template>
+
+</odoo>
